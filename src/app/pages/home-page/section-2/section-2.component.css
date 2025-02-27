@@ -1,0 +1,10 @@
+.card{
+  background-color: #E2E2E2;
+  color: #000;
+  transition: 0.7s ease;
+  &:hover{
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05);
+  }
+}

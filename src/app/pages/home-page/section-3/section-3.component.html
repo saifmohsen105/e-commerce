@@ -1,0 +1,26 @@
+<section class="pt-20" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="400">
+  <app-title-section>This Month</app-title-section>
+  <h2 class="p-5 text-3xl font-bold">Best Selling Products</h2>
+  @defer () {
+  <owl-carousel-o [options]="carouselOptions">
+    @if(getCategories.data !== undefined) {
+    @for (categorie of getCategories.data.slice(0,15); track getCategories._id) {
+    <ng-template carouselSlide>
+      <div class="p-4 flex">
+        <div
+          class="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden card flex flex-col min-h-full w-full">
+          <img class="h-48 w-full object-cover" [src]="categorie.image" alt="blog">
+          <div class="p-6 flex-grow">
+            <h2 class="tracking-widest text-md title-font font-medium text-gray-400 mb-1">
+              {{categorie.slug}}
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </ng-template>
+    }
+    }
+  </owl-carousel-o>
+  }
+</section>

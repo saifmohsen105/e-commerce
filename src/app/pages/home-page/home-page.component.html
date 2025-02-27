@@ -1,0 +1,44 @@
+<header class="h-[100vh] md:pt-20 pt-0 ">
+  <div class="grid  md:grid-cols-2 grid-cols-1 ">
+    <!-- Content header -->
+    <div class="left-header  p-[50px]">
+      <h1 class="text-3xl font-bold  sm:p-5 ">Welcome to Exclusive shop</h1>
+      <p class="sm:text-xl text-md  leading-tight pt-5 sm:p-5  ">{{words}}</p>
+      <button class="px-[30px] py-[10px] bg-black rounded-[25px] text-white m-5">Show Now</button>
+    </div>
+    <!-- ------------------------------------------ -->
+    <!-- slider  -->
+    <div id="default-carousel" class="relative w-full hidden md:block" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-[500px]   ">
+        @if(getFakeProducts!=undefined){
+        @for (product of getFakeProducts.slice(15); track $index) {
+        <div class="hidden duration-700 ease-in-out text-center " data-carousel-item>
+          <img [src]="product.image" class="absolute block w-[40%] end-[50%] translate-x-[50%] "
+            [alt]="product.title">
+        </div>
+        }
+        }
+      </div>
+      <!-- Slider indicators (buttons) -->
+      <div class="absolute z-30 flex -translate-x-1/2  left-1/2 space-x-3 rtl:space-x-reverse ">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+          data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+          data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+          data-carousel-slide-to="2"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+          data-carousel-slide-to="3"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+          data-carousel-slide-to="4"></button>
+      </div>
+
+
+    </div>
+    <!-- ------------------------------------------- -->
+  </div>
+  <app-section-home-1 [products]="getProducts"></app-section-home-1>
+  <app-section-home-2></app-section-home-2>
+  <app-section-home-3 [getCategories]="getCategories"></app-section-home-3>
+</header>

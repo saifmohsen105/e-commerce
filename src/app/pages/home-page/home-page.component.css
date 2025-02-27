@@ -1,0 +1,19 @@
+@import './../../styles/varariblas.css';
+.title{
+  align-self: center;
+}
+.btm-shopNow{
+  background-color: var(--btm);
+  color: var(--primary-color  );
+  padding: .625rem 1.875rem;
+  margin-top: 1.25rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+img{
+  border-radius: 25px;
+}
+
+p{
+  line-height: 35px;
+}

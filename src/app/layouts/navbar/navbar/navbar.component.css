@@ -1,0 +1,18 @@
+@import "./../../../styles/varariblas.css";
+.input-search{
+  background-color: var(#000);
+}
+nav{
+  border-bottom: #000 solid;
+  color: var(--text3);
+}
+.active{
+  border-bottom: solid 1px;
+}
+.drop-down{
+  background: linear-gradient(to left ,rgb(211, 203, 218) , rgb(156, 151, 160) );
+}
+input{
+  --tw-ring-inset : 0
+}
+

@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+
+body {
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #F3F4F6!important;
+}

@@ -1,0 +1,47 @@
+<section class="pt-20 " data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300">
+  <app-title-section>Today 's
+    <input type="search" placeholder="Search" class="border-2 border-gray-200 border-opacity-60 rounded-lg p-2">
+  </app-title-section>
+  @defer () {
+  <owl-carousel-o [options]="carouselOptions">
+    @if(products.data!=undefined){
+    @for (product of products.data.slice(0,15); track product.id) {
+    <ng-template carouselSlide>
+      <div class="p-4">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden card relative group">
+          <div class="absolute top-3 right-3 flex flex-col space-y-2">
+            <button class="text-gray-500 hover:text-red-500 transition" #btmHeart><i class="fas fa-heart"></i></button>
+            <button class="text-gray-500 hover:text-gray-700 transition" #btmEye><i class="fas fa-eye"></i></button>
+          </div>
+          <figure>
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" [src]="product.imageCover" alt="blog">
+            <figcaption>
+              <div class="p-6">
+                <h2 class="tracking-widest text-md title-font font-medium text-gray-400 mb-1">{{product.category.name}}
+                </h2>
+              </div>
+              <div class="flex justify-between px-10 ">
+                <span  class="font-bold">Price
+                  @if(product.priceAfterDiscount !== undefined){
+                  <sup class="text-lg"><span class="line-through text-gray-400">{{product.price}}</span></sup>
+                  <span>{{product.priceAfterDiscount}}</span>
+                  }@else {
+                  <span>{{product.price}}</span>
+                  }
+                </span>
+                <span class="font-bold"> <i class="fa-solid fa-star text-[gold]"></i> {{ product.ratingsAverage}}</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <button class="!bg-black !text-white" (click)="addToCart(product.id)">Add to cart</button>
+        </div>
+      </div>
+    </ng-template>
+    }
+    }
+
+  </owl-carousel-o>
+  }
+
+</section>

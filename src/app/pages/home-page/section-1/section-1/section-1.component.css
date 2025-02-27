@@ -1,0 +1,32 @@
+img {
+  height: 100% !important;
+  width: 50% !important;
+  mix-blend-mode: darken;
+  margin: 0 auto;
+}
+
+.card {
+  height: 100%;
+  background-color: #e2e2e2;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  button {
+    width: 75%;
+    padding: .3125rem;
+    transform: translateY(100%);
+    transition: 0.7s ease;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.7s ease;
+  }
+  &:hover {
+    transform: scale(1.05);
+    button {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

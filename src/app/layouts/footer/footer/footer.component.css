@@ -1,0 +1,40 @@
+@import url("./../../../styles/varariblas.css");
+
+footer {
+  background-color: #000;
+  h2 {
+    color: var(--text);
+    font-size: 20px;
+  }
+  a {
+    color: var(--text2);
+    transition: 0.7s ease;
+  }
+  a:hover {
+    background-color: var(--primary-color);
+    color: #000;
+  }
+  p {
+    color: var(--text2);
+  }
+  h3 {
+    color: var(--text2);
+  }
+  small {
+    color: var(--text2);
+  }
+  .card-1 {
+    form {
+      transition: 0.7s ease;
+    }
+    form {
+      background-color: var(--primary-color);
+      color: #000;
+      input:foucs {
+        outline: none;
+        border: none;
+      }
+    }
+
+  }
+}
